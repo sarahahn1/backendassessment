@@ -23,5 +23,31 @@ const getFortune = () => {
 
 fortuneBtn.addEventListener('click', getFortune)
 
+const  movieBtn = document.getElementById("movieButton")
 
+const getMovies = () => {
+    axios.get("https://localhost:4000/api/movies/")
+    .then( res => {
+        const data = res.data;
+        alert(data)
+    });
+};
 
+const tvShowBtn = document.getElementById("tvShow")
+const getTvShows = () => {
+axios.get("https://localhost:4000/api/tvShows/")
+.then(res => {
+    const data = res.data;
+    alert(data)
+});
+
+};
+
+const restrauntBtn = document.getElementById("restrauntButton")
+const getRestraunts = () => {
+    axios.get("https://localhost:4000/api/restraunts")
+    .then(res => {
+        const data = res.data;
+        alert(data)
+    });
+};
