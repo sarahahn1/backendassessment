@@ -11,8 +11,8 @@ const getCompliment = () => {
 complimentBtn.addEventListener('click', getCompliment)
 
 
-const fortuneBtn = document.getElementById("fortuneButton")
 
+const fortuneBtn = document.getElementById("fortuneButton")
 const getFortune = () => {
     axios.get("http://localhost:4000/api/fortunes/")
     .then(res => {
@@ -31,20 +31,19 @@ fortuneBtn.addEventListener('click', getFortune)
 const  movieBtn = document.getElementById("movieButton")
 
 const getMovies = () => {
-    axios.get("https://localhost:4000/api/movies/")
-    .then( res => {
+    axios.get("http://localhost:4000/api/movies/")
+    .then(res => {
         const data = res.data;
         alert(data)
     });
-}
-
+};
 
 movieBtn.addEventListener('click', getMovies)
 
 
 const tvShowBtn = document.getElementById("tvShow")
 const getTvShows = () => {
-axios.get("https://localhost:4000/api/tvShows/")
+axios.get("http://localhost:4000/api/tvShows/")
 .then(res => {
     const data = res.data;
     alert(data)
@@ -56,11 +55,11 @@ axios.get("https://localhost:4000/api/tvShows/")
 tvShowBtn.addEventListener('click', getTvShows)
 
 
-
+ 
 
 const restrauntBtn = document.getElementById("restrauntButton")
 const getRestraunts = () => {
-    axios.get("https://localhost:4000/api/restraunts")
+    axios.get("http://localhost:4000/api/restraunts")
     .then(res => {
         const data = res.data;
         alert(data)
