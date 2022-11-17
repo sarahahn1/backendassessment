@@ -23,6 +23,11 @@ const getFortune = () => {
 
 fortuneBtn.addEventListener('click', getFortune)
 
+
+
+
+
+
 const  movieBtn = document.getElementById("movieButton")
 
 const getMovies = () => {
@@ -31,7 +36,11 @@ const getMovies = () => {
         const data = res.data;
         alert(data)
     });
-};
+}
+
+
+movieBtn.addEventListener('click', getMovies)
+
 
 const tvShowBtn = document.getElementById("tvShow")
 const getTvShows = () => {
@@ -43,6 +52,12 @@ axios.get("https://localhost:4000/api/tvShows/")
 
 };
 
+
+tvShowBtn.addEventListener('click', getTvShows)
+
+
+
+
 const restrauntBtn = document.getElementById("restrauntButton")
 const getRestraunts = () => {
     axios.get("https://localhost:4000/api/restraunts")
@@ -51,3 +66,5 @@ const getRestraunts = () => {
         alert(data)
     });
 };
+
+restrauntBtn.addEventListener('click', getRestraunts)
